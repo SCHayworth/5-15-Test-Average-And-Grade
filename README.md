@@ -32,7 +32,54 @@
 
 ## Pseudocode
 ### main function
+    START
+      INPUT score 1
+      INPUT score 2
+      INPUT score 3
+      INPUT score 4
+      INPUT score 5
+      CALL calc_average and pass scores 1 through 5 as arguments
+      SET average score to return value of calc_average
+      PRINT table header
+        score        numeric grade    letter grade
+        ----------------------------------------------------
+      FOR each score
+        PRINT score number
+        PRINT score
+        CALL determine_grade
+        PRINT letter grade
+      ENDFOR
+      PRINT table foot
+        ----------------------------------------------------
+      PRINT average score
+      CALL determine_grade
+      PRINT letter grade
+    END
 
 ### calc_average function
+    START
+      PASS IN: arbitrary number of scores
+      SET score accumulator to 0
+      FOR each argument
+        INCREMENT score accumulator by score
+      ENDFOR
+      CALCULATE average by dividing the score accumulator by the number of scores
+      PASS OUT: average
+    END
 
 ### determine_grade function
+    START
+      PASS IN: score
+        IF score >= 90 AND <= 100 THEN
+          letter grade = A
+        ELSE IF score >= 80 AND <= 89 THEN
+          letter grade = B
+        ELSE IF score >= 70 AND <= 79 THEN
+          letter grade = C
+        ELSE IF score >=60 AND <= 69 THEN
+          letter grade = D
+        ELSE
+          letter grade = F
+        ENDIF
+      PASS OUT: letter grade
+    END
