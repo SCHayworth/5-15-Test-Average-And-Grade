@@ -34,7 +34,7 @@
 ### main function
     START
       SET score counter to 0
-      WHILE score counter is less than 4
+      WHILE score counter is less than 5
         INPUT a score into a list
         INCREMENT score counter by 1
       ENDWHILE
