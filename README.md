@@ -33,19 +33,19 @@
 ## Pseudocode
 ### main function
     START
-      INPUT score 1
-      INPUT score 2
-      INPUT score 3
-      INPUT score 4
-      INPUT score 5
-      CALL calc_average and pass scores 1 through 5 as arguments
+      SET score counter to 0
+      WHILE score counter is less than 4
+        INPUT a score into a list
+        INCREMENT score counter by 1
+      ENDWHILE
+      CALL calc_average and pass score list as an argument
       SET average score to return value of calc_average
       PRINT table header
         score        numeric grade    letter grade
         ----------------------------------------------------
-      FOR each score
-        PRINT score number
-        PRINT score
+      FOR each score in the list
+        PRINT score index + 1
+        PRINT score value
         CALL determine_grade
         PRINT letter grade
       ENDFOR
@@ -58,12 +58,12 @@
 
 ### calc_average function
     START
-      PASS IN: arbitrary number of scores
+      PASS IN: list of scores
       SET score accumulator to 0
-      FOR each argument
+      FOR each item in score list
         INCREMENT score accumulator by score
       ENDFOR
-      CALCULATE average by dividing the score accumulator by the number of scores
+      CALCULATE average by dividing the score accumulator by the number of items in the list
       PASS OUT: average
     END
 
