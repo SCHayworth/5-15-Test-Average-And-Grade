@@ -61,7 +61,7 @@
     START
       PASS IN: list of scores
       CALCULATE average score
-        CALL mean function and pass the list of scores
+        divide the sum of the list of scores by the number of scores in the list
       PASS OUT: average
     END
 
