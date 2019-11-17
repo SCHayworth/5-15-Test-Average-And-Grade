@@ -11,8 +11,7 @@
 # Create a constant for the table header
 TABLE_HEAD = """
 score        numeric grade    letter grade
-----------------------------------------------------\n
-"""
+----------------------------------------------------"""
 
 def main():
     '''Mainline program logic
@@ -22,6 +21,7 @@ def main():
     test_scores = []
     while score_counter < 5:
         new_score = int(input(f'Enter test score {len(test_scores) + 1}: '))
+        test_scores.append(new_score)
         score_counter += 1
 
     # Find the average of all the test scores.
@@ -30,11 +30,12 @@ def main():
     # Print the teable header, and print the scores and grades beneath it.
     print(TABLE_HEAD)
     for score in test_scores:
-        print(f'Score {len(test_scores) + 1}:     {score}     {determine_grade(score)}')
-    print('----------------------------------------------------\n')
+        print(f'Score {(len(test_scores) - score_counter) + 1}:          {score}             {determine_grade(score)}')
+        score_counter -= 1
+    print('----------------------------------------------------')
 
     # Print the average test score and its letter grade.
-    print(f'Average score:     {average_score}     {determine_grade(average_score)}')
+    print(f'Average score:      {average_score}        {determine_grade(average_score)}')
 
 
 def calc_average(score_list):
@@ -70,4 +71,4 @@ def determine_grade(score):
         return 'F'
 
 # Call the main() function to execute the program.
-main()        
+main()
