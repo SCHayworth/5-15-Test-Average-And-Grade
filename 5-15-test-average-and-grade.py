@@ -34,12 +34,12 @@ def main():
     # Print the teable header, and print the scores and grades beneath it.
     print(TABLE_HEAD)
     for score in test_scores:
-        print(f'Score {(len(test_scores) - score_counter) + 1:<}: {score:^}{determine_grade(score):>}')
+        print(f'Score {(len(test_scores) - score_counter) + 1}: {score:>15}{determine_grade(score):>20}')
         score_counter -= 1
     print('----------------------------------------------------')
 
     # Print the average test score and its letter grade.
-    print(f'Average score: {average_score:^}{determine_grade(average_score):>}')
+    print(f'Average score: {average_score:>9}{determine_grade(average_score):>20}')
 
 
 def calc_average(score_list):
