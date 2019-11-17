@@ -24,7 +24,7 @@ def main():
     score_counter = 0
     test_scores = []
     while score_counter < 5:
-        new_score = int(input(f'Enter test score {len(test_scores) + 1}: '))
+        new_score = float(input(f'Enter test score {len(test_scores) + 1}: '))
         test_scores.append(new_score)
         score_counter += 1
 
