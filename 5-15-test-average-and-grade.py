@@ -16,6 +16,7 @@ TABLE_HEAD = """
 score        numeric grade    letter grade
 ----------------------------------------------------"""
 
+
 def main():
     '''Mainline program logic
     '''
