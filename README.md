@@ -33,6 +33,7 @@
 ## Pseudocode
 ### main function
     START
+      IMPORT Python math module
       SET score counter to 0
       WHILE score counter is less than 5
         INPUT a score into a list
@@ -59,11 +60,8 @@
 ### calc_average function
     START
       PASS IN: list of scores
-      SET score accumulator to 0
-      FOR each item in score list
-        INCREMENT score accumulator by score
-      ENDFOR
-      CALCULATE average by dividing the score accumulator by the number of items in the list
+      CALCULATE average score
+        CALL mean function and pass the list of scores
       PASS OUT: average
     END
 
