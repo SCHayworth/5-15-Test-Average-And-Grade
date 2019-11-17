@@ -52,7 +52,7 @@ def calc_average(score_list):
 def determine_grade(score):
     '''Returns a letter grade for a test score passed into the function.
     '''
-    if score >= 90 and score <= 100:
+    if score >= 90:
         return 'A'
     elif score >= 80 and score <= 89:
         return 'B'
