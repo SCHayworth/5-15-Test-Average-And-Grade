@@ -8,6 +8,9 @@
 # Program gets 5 test scores from the user, determines the letter grade for
 # each one, and then determines the letter grade for the average of all 5.
 
+# Import the Python math module.
+import math
+
 # Create a constant for the table header
 TABLE_HEAD = """
 score        numeric grade    letter grade
@@ -39,20 +42,9 @@ def main():
 
 
 def calc_average(score_list):
-    '''Calculates the average of a list of test scores and returns the value.
+    '''Calculates the average of a list of test scores and returns the result.
     '''
-    # Get the total number of items in the list.
-    list_items = len(score_list)
-
-    # Initialize an accumulator variable.
-    sum = 0
-
-    # Get each value in the list and add it to the accumulator.
-    for number in score_list:
-        sum += number
-
-    # Calculate the average of the items in the list and return the result.
-    average = sum / list_items
+    average = math.fsum(score_list) / len(score_list)
     return average
 
 
